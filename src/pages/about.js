@@ -10,7 +10,11 @@ const AboutPage = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <Seo title="About" />
-      <h1>About About About memememe</h1>
+      <h1>This project build by Gatsby</h1>
+      <h3>Published on : </h3>
+       <h3><a href="https://festive-rosalind-d662ed.netlify.app">https://festive-rosalind-d662ed.netlify.app</a></h3>         
+      <h3>April 2021</h3>      
+      <h3>Developer : Homayoun Fakhar</h3>          
     </Layout>
   )
 }
