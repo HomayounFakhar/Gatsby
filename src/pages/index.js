@@ -1,4 +1,4 @@
-import * as React from "react"
+import React, { useState } from 'react';
 import { Link, graphql } from "gatsby"
 
 import Bio from "../components/bio"
@@ -8,6 +8,18 @@ import Seo from "../components/seo"
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
+
+  const [search , setSearch] = useState('')
+
+  const SearchTitle = (event) => {
+    setSearch(event.target.value);
+  }
+  
+  const [searchdescription , setSearchdescription] = useState('')
+
+  const Searchdescription = (event) => {
+    setSearchdescription(event.target.value);
+  }
 
   if (posts.length === 0) {
     return (
@@ -25,12 +37,34 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
+       
+       <input 
+        type="search" 
+        placeholder="Search For Title" 
+        onChange={SearchTitle} 
+        value={search}
+        />
+
+       <input 
+        type="search" 
+        placeholder="Search For description" 
+        onChange={Searchdescription} 
+        value={searchdescription}
+        />         
+      
+      <br></br>      
+      <br></br>      
+
       <Seo title="All posts" />
       <Bio />
-      <ol style={{ listStyle: `none` }}>
-        {posts.map(post => {
-          const title = post.frontmatter.title || post.fields.slug
 
+      <ol style={{ listStyle: `none` }}>
+        {posts
+        .filter(post => post.frontmatter.description.toUpperCase().includes(searchdescription.toUpperCase()))    
+        .filter(post => post.frontmatter.title.toUpperCase().includes(search.toUpperCase()))            
+        .map(post => {
+
+          const title = post.frontmatter.title || post.fields.slug
           return (
             <li key={post.fields.slug}>
               <article
