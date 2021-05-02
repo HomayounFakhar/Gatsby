@@ -1,5 +1,6 @@
 import * as React from "react"
 import { graphql } from "gatsby"
+import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -16,6 +17,10 @@ const AboutPage = ({ data, location }) => {
        <p><a href="https://festive-rosalind-d662ed.netlify.app">https://festive-rosalind-d662ed.netlify.app</a></p>         
       <h4>April 2021</h4>      
       <h4>Developer : Homayoun Fakhar</h4>          
+      
+      
+      <Link to="/">Go To Home</Link>
+      
     </Layout>
   )
 }
