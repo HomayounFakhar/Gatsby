@@ -79,6 +79,7 @@ const BlogIndex = ({ data, location }) => {
                     </Link>
                   </h2>
                   <small>{post.frontmatter.date}</small>
+                 
                 </header>
                 <section>
                   <p
@@ -88,6 +89,8 @@ const BlogIndex = ({ data, location }) => {
                     itemProp="description"
                   />
                 </section>
+                <p>Reference : <a href={post.frontmatter.Reference}>{post.frontmatter.Reference}</a></p>
+                
               </article>
             </li>
           )
@@ -116,6 +119,7 @@ export const pageQuery = graphql`
           date(formatString: "MMMM DD, YYYY")
           title
           description
+          Reference
         }
       }
     }
