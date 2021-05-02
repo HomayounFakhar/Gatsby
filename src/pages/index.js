@@ -10,16 +10,15 @@ const BlogIndex = ({ data, location }) => {
   const posts = data.allMarkdownRemark.nodes
 
   const [search , setSearch] = useState('')
-
   const SearchTitle = (event) => {
     setSearch(event.target.value);
   }
   
   const [searchdescription , setSearchdescription] = useState('')
-
   const Searchdescription = (event) => {
     setSearchdescription(event.target.value);
   }
+
 
   if (posts.length === 0) {
     return (

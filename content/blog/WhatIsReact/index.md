@@ -1,16 +1,32 @@
 ---
 title: What is React ?
 date: "2021-04-28T10:10:01.169Z"
-description: This is a custom description for SEO and Open Graph purposes, rather than the default generated excerpt. Simply add a description field to the frontmatter.
-Reference : ReferenceReferenceReference
+description: React is an open-source, front end, JavaScript library for building user interfaces or UI components. It is maintained by Facebook and a community of individual developers and companies. React can be used as a base in the development of single-page or mobile applications.
+Reference : https://en.wikipedia.org/wiki/React_(JavaScript_library)
 ---
 
-Far far away, behind the word mountains, far from the countries Vokalia and
-Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
-right at the coast of the Semantics, a large language ocean. A small river named
-Duden flows by their place and supplies it with the necessary regelialia.
+React is an open-source, front end, JavaScript library for building user interfaces or UI components. It is maintained by Facebook and a community of individual developers and companies. React can be used as a base in the development of single-page or mobile applications.
 
-## On deer horse aboard tritely yikes and much
+![React](./React.png)
+
+Install [React JS](https://reactjs.org/docs/getting-started.html)
+
+## Sample Code
+
+Sample of Render :
+
+```js
+class App extends React.Component {
+  render() {
+    const i = 1;
+    return (
+      <div>
+        <h1>{ i === 1 ? 'true' : 'false' }</h1>
+      </div>
+    );
+  }
+}
+```
 
 The Big Oxmox advised her not to do so, because there were thousands of bad
 Commas, wild Question Marks and devious Semikoli, but the Little Blind Text
