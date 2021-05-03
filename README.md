@@ -12,8 +12,8 @@ npm i -g gatsby-cli;
 gatsby new project https://github.com/gatsbyjs/gatsby-starter-blog
 ```
 
-Color :
-https://colorhunt.co/palette/264502
+    Color :
+    https://colorhunt.co/palette/264502
 
 
     develop :
