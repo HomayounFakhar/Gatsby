@@ -14,9 +14,6 @@ For using Hook in React
 import React, { useState } from 'react';
 ```
 
-
-
-
 2. Define according to the methods below
 
 ```js

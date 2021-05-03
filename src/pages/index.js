@@ -26,9 +26,7 @@ const BlogIndex = ({ data, location }) => {
         <Seo title="All posts" />
         <Bio />
         <p>
-          No blog posts found. Add markdown posts to "content/blog" (or the
-          directory you specified for the "gatsby-source-filesystem" plugin in
-          gatsby-config.js).
+          There is no Post !!!
         </p>
       </Layout>
     )
@@ -37,19 +35,21 @@ const BlogIndex = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
        
-       <input 
-        type="search" 
-        placeholder="Search For Title" 
-        onChange={SearchTitle} 
-        value={search}
-        />
+       <div className="search">
+          <input 
+           type="search" 
+           placeholder="Search For Title" 
+           onChange={SearchTitle} 
+           value={search}
+           />
 
-       <input 
-        type="search" 
-        placeholder="Search For description" 
-        onChange={Searchdescription} 
-        value={searchdescription}
-        />         
+          <input 
+           type="search" 
+           placeholder="Search For description" 
+           onChange={Searchdescription} 
+           value={searchdescription}
+           />  
+        </div>       
       
       <br></br>      
       <br></br>      
@@ -91,6 +91,7 @@ const BlogIndex = ({ data, location }) => {
                 <p>Reference : <a href={post.frontmatter.Reference}>{post.frontmatter.Reference}</a></p>
                 
               </article>
+              <hr />
             </li>
           )
         })}
