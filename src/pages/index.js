@@ -38,14 +38,14 @@ const BlogIndex = ({ data, location }) => {
        <div className="search">
           <input 
            type="search" 
-           placeholder="Search For Title" 
+           placeholder="Title Search" 
            onChange={SearchTitle} 
            value={search}
            />
 
           <input 
            type="search" 
-           placeholder="Search For description" 
+           placeholder="Description Search" 
            onChange={Searchdescription} 
            value={searchdescription}
            />  
